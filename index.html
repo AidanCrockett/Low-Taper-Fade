@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ninja Low Taper Fade Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+    .ninja-button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      position: relative;
+    }
+    .ninja-button img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      transition: transform 0.2s ease;
+    }
+    .ninja-button img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <button class="ninja-button" onclick="playAudio()">
+    <img src="https://img.redbull.com/images/c_crop,x_217,y_0,h_2133,w_1707/c_fill,w_450,h_600/q_auto:low,f_auto/redbullcom/2018/06/18/cae41691-8bcb-4d6d-8c0e-43310f90dba9/fortnite-battle-royale-ninja-blevins" alt="Ninja">
+  </button>
+
+  <audio id="audio" src="low-taper-fade.mp3.mp3"></audio>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById('audio');
+      audio.currentTime = 0; // Reset to the start
+      audio.play();
+    }
+  </script>
+</body>
+</html>
